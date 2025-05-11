@@ -427,7 +427,7 @@ textarea {
 
   
   <script>
-    function previewImage(input) {
+function previewImage(input) {
   const file = input.files[0];
   if (!file) return;
 
@@ -436,13 +436,13 @@ textarea {
     const container = input.closest('.profile-block');
     const preview = container.querySelector('.preview');
     if (preview) {
-      preview.src = e.target.resul
+      preview.src = e.target.result; // 修正: e.target.result を正しく参照
       preview.style.display = 'block';
     }
   };
   reader.readAsDataURL(file);
 }
-    </script>
+</script>
     <script>
     setTimeout(() => {
       link.click();
