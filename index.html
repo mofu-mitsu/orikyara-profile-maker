@@ -3,30 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>♡オリキャラプロフィールメーカー♡</title>
-  <!-- SEO用 -->
-<meta name="description" content="オリキャラのプロフィールが簡単に作れる♡ふわふわ可愛いプロフィールメーカーです。画像アップロードやSNSシェア機能もあり！">
-<meta name="keywords" content="オリキャラ, プロフィールメーカー, オリキャラプロフィール, 可愛い, オタク, ブラウザアプリ, シェア, 一次創作, 自己紹介メーカー">
-<meta name="author" content="cottoncloud">
-<meta name="google-site-verification" content="asXFHz9t9b5MSUrHRfKPT3fYOs-qxfbJCM56p1ONUAM" />
-<!-- OGP（SNS共通） -->
-<meta property="og:title" content="♡オリキャラプロフィールメーカー♡">
-<meta property="og:description" content="あなたのオリキャラをかわいく紹介しちゃおう！画像保存＆シェアもできるプロフィールメーカー">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mofu-mitsu.github.io/orikyara-profile-maker/">
-<meta property="og:image" content="https://mofu-mitsu.github.io/orikyara-profile-maker/ogp.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<!-- Twitterカード用 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="♡オリキャラプロフィールメーカー♡">
-<meta name="twitter:description" content="あなたのオリキャラをかわいく紹介しちゃおう！画像保存＆シェアもできるプロフィールメーカー">
-<meta name="twitter:image" content="https://mofu-mitsu.github.io/orikyara-profile-maker/ogp.png">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="オリキャラのプロフィールが簡単に作れる♡ふわふわ可愛いプロフィールメーカーです。画像アップロードやSNSシェア機能もあり！">
+  <meta name="keywords" content="オリキャラ, プロフィールメーカー, オリキャラプロフィール, 可愛い, オタク, ブラウザアプリ, シェア, 一次創作, 自己紹介メーカー">
+  <meta name="author" content="cottoncloud">
+  <meta name="google-site-verification" content="asXFHz9t9b5MSUrHRfKPT3fYOs-qxfbJCM56p1ONUAM" />
+  
+  <meta property="og:title" content="♡オリキャラプロフィールメーカー♡">
+  <meta property="og:description" content="あなたのオリキャラをかわいく紹介しちゃおう！画像保存＆シェアもできるプロフィールメーカー">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mofu-mitsu.github.io/orikyara-profile-maker/">
+  <meta property="og:image" content="https://mofu-mitsu.github.io/orikyara-profile-maker/ogp.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="♡オリキャラプロフィールメーカー♡">
+  <meta name="twitter:description" content="あなたのオリキャラをかわいく紹介しちゃおう！画像保存＆シェアもできるプロフィールメーカー">
+  <meta name="twitter:image" content="https://mofu-mitsu.github.io/orikyara-profile-maker/ogp.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
   <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;700&display=swap" rel="stylesheet">
+  
   <style>
     body {
       font-family: 'Kiwi Maru', sans-serif;
       margin: 0;
-      padding: 0 0 120px 0; /* ←ここ大事！フッターに食われないよう下パディング */
+      padding: 0 0 150px 0; /* フッターに食われないよう下パディング */
       background: linear-gradient(to bottom, #eef8ff, #ffffff);
       background-image: url('background.png');
       max-width: 100%;
@@ -34,9 +35,9 @@
       position: relative;
     }
     img, iframe, canvas {
-  max-width: 100%;
-  height: auto;
-}
+      max-width: 100%;
+      height: auto;
+    }
 
     /* 星アニメーション */
     body::before {
@@ -50,21 +51,22 @@
       opacity: 0.5;
       z-index: 0;
       animation: twinkle 20s linear infinite;
-      pointer-events: none; /* ←追加これだけ！ */
+      pointer-events: none;
     }
-    /* どこかのstyle.cssやhead内に入れてね */
-.loader {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #7ca9f7;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+
+    /* ローディングアニメーション（青系に変更） */
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #7ca9f7;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
     @keyframes twinkle {
       0% { background-position: 0 0; }
@@ -94,28 +96,30 @@
       font-weight: bold;
       position: relative;
     }
+    
+    /* 使い方セクションのデザイン */
     #howto-section .title-cloud {
-  color: #7ca9f7 !important;
-}
-#howto-section p {
-  color: #73759f; /* ピンク系の文字色 */
-  font-weight: bold; /* 太字にする（必要なら） */
-  line-height: 1.6; /* 行間を調整（必要なら） */
-}
+      color: #7ca9f7 !important;
+    }
+    #howto-section p {
+      color: #73759f;
+      font-weight: bold;
+      line-height: 1.6;
+    }
 
     .custom-file-upload {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #adcbff;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #adcbff;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.custom-file-upload input[type="file"] {
-  display: none;
-}
+    .custom-file-upload input[type="file"] {
+      display: none;
+    }
 
     label {
       display: block;
@@ -124,57 +128,59 @@
       color: #6888aa;
     }
 
-   input[type="text"],
-input[type="url"],
-textarea {
-  width: 100%;
-  padding: 14px 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  font-size: 14px;
-  line-height: 1.6;
-  transition: border-color 0.2s, box-shadow 0.2s; /* ←ふわっと */
-}
+    input[type="text"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 14px 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1.6;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
 
-input[type="text"]:hover,
-input[type="url"]:hover,
-textarea:hover {
-  border-color: #acd1f8;
-  box-shadow: 0 0 5px rgba(248, 172, 207, 0.3);
-}
+    input[type="text"]:hover,
+    input[type="url"]:hover,
+    textarea:hover {
+      border-color: #acd1f8;
+      box-shadow: 0 0 5px rgba(132, 124, 247, 0.3);
+    }
 
-input[type="text"]:focus,
-input[type="url"]:focus,
-textarea:focus {
-  border-color: #acd1f8;
-  box-shadow: 0 0 8px rgba(132, 124, 247, 0.6);
-  outline: none; /* デフォの青い枠を消す */
-}
-.sukiTextDisplay {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  border: 1px solid #ccc;
-  padding: 14px 12px;
-  min-height: 2em;
-  width: 100%;
-  box-sizing: border-box;
-  border-radius: 10px;
-  font-family: inherit;
-  background-color: #ffffff;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  cursor: text; /* マウスカーソルをテキスト入力っぽく */
-}
+    input[type="text"]:focus,
+    input[type="url"]:focus,
+    textarea:focus {
+      border-color: #7ca9f7;
+      box-shadow: 0 0 8px rgba(132, 124, 247, 0.6);
+      outline: none;
+    }
 
-.sukiTextDisplay:hover {
-  border-color: #acd1f8; /* ピンク系にふわっと変化 */
-  box-shadow: 0 0 5px rgba(132, 124, 247, 0.6);
-}
+    /* contenteditableのdiv用スタイル */
+    .sukiTextDisplay {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      border: 1px solid #ccc;
+      padding: 14px 12px;
+      min-height: 2em;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-family: inherit;
+      background-color: #ffffff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      cursor: text;
+    }
 
-.sukiTextDisplay:focus-within {
-  border-color: #7ca9f7;
-  box-shadow: 0 0 8px rgba(132, 124, 247, 0.6);
-}
+    .sukiTextDisplay:hover {
+      border-color: #acd1f8;
+      box-shadow: 0 0 5px rgba(132, 124, 247, 0.6);
+    }
+
+    .sukiTextDisplay:focus-within {
+      border-color: #7ca9f7;
+      box-shadow: 0 0 8px rgba(132, 124, 247, 0.6);
+    }
 
     input[type="file"] {
       margin-bottom: 10px;
@@ -190,13 +196,16 @@ textarea:focus {
       font-weight: bold;
       cursor: pointer;
     }
+
+    /* 削除ボタン（青系） */
     .delete-btn {
       background: #94b7ff !important;
       font-size: 0.9em;
       padding: 8px 16px;
       margin-top: 10px;
     }
-    /* 犬猫逃げる */
+
+    /* 犬猫逃げるアニメーション */
     .animal {
       position: fixed;
       width: 70px;
@@ -206,10 +215,13 @@ textarea:focus {
     }
     .dog { bottom: 20px; left: 20px; }
     .cat { bottom: 20px; right: 20px; }
+    
+    /* 使い方開いたら上に逃げるクラス */
     .howto-open .animal { bottom: 130px !important; }
 
     /* 使い方余白 */
     #howto-section { padding-bottom: 280px; }
+    
     .share-options {
       display: none;
       margin-top: 10px;
@@ -219,70 +231,40 @@ textarea:focus {
     .share-options button {
       margin: 5px;
     }
+    
     textarea {
-  resize: none; /* リサイズ禁止 */
-  min-height: 50px; /* 最低高さを設定 */
-}
- @media screen and (max-width: 768px) {
-  input[type="text"],
-  input[type="url"],
-  textarea {
-    padding: 10px 12px;  /* ←ここ大事！上下を大きめに */
-    line-height: 1.6;    /* 行間ちょっと広めに */
-    font-size: 16px;     /* 必要に応じて調整 */
-    height: auto;        /* 高さを固定してるなら外すか調整 */
-  }
-  .container {
-    max-width: 95%;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-    .title {
-      font-size: 24px;
-      padding: 10px;
-    }
-     .animal {
-    width: 50px;
-  }
-
-    .profile-container {
-      width: 90%;
-      margin: 0 auto;
-      font-size: 14px;
+      resize: none;
+      min-height: 50px;
     }
 
-    .share-buttons {
-      flex-direction: column;
-      gap: 10px;
+    @media screen and (max-width: 768px) {
+      input[type="text"],
+      input[type="url"],
+      textarea {
+        padding: 10px 12px;
+        line-height: 1.6;
+        font-size: 16px;
+        height: auto;
+      }
+      .container {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .animal {
+        width: 50px;
+      }
+      .share-options button {
+        width: 100%;
+        margin: 5px 0;
+      }
+      img.cat, img.dog {
+        width: 60px;
+        height: auto;
+      }
     }
 
-   #saveTarget {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input[type="text"],
-input[type="url"],
-textarea {
-  padding: 6px 8px;
-  line-height: 1.4;
-  box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-    img.cat,
-    img.dog {
-      width: 60px;
-      height: auto;
-    }
-  }
-
-    /* 固定フッター（ボタンを食わないようz-index低め） */
+    /* 固定フッター */
     .footer-nav {
       position: fixed;
       bottom: 0; left: 0;
@@ -290,7 +272,7 @@ textarea {
       background: #f0f8ff;
       padding: 16px;
       text-align: center;
-      z-index: 900; /* ← ボタンより下 */
+      z-index: 900;
       border-top: 2px dashed #a5c8f8;
       box-shadow: 0 -3px 10px rgba(0,0,0,0.1);
     }
@@ -300,63 +282,65 @@ textarea {
       text-decoration: none;
       font-size: 1.1em;
     }
-   .ad-footer {
-    text-align: center;
-    padding: 20px;
-    background: #f0f8ff;
-    border-top: 2px dashed #a5c8f8;
-    margin-top: 40px;
-    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-  }
+
+    /* 広告フッター */
+    .ad-footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f8ff;
+      border-top: 2px dashed #a5c8f8;
+      margin-top: 40px;
+      font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    }
   
-  .ad-title {
-    font-weight: bold;
-    color: #7ca9f7;
-    font-size: 1.2em;
-    margin-bottom: 16px;
-    letter-spacing: 1px;
-  }
+    .ad-title {
+      font-weight: bold;
+      color: #7ca9f7;
+      font-size: 1.2em;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+    }
   
-  .ad-banner {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+    .ad-banner {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
   
-  .ad-banner a img {
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
-  }
-  .ad-banner a img:hover {
-    transform: scale(1.05);
-  }
-  .back-to-home a {
-    color: #7ca9f7;
-    font-size: 0.95em;
-  }
-  .back-to-home a:hover {
-    text-decoration: underline;
-  }
+    .ad-banner a img {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s ease;
+    }
+    .ad-banner a img:hover {
+      transform: scale(1.05);
+    }
+    .back-to-home a {
+      color: #7ca9f7;
+      font-size: 0.95em;
+    }
+    .back-to-home a:hover {
+      text-decoration: underline;
+    }
   
-  /* 保存時のみ反映させたいCSS */
-  #profileDisplayArea.saving-style {
-    padding: 40px 30px;
-    background: #f0f8ff;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  #favDisplay {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    width: 100%;
-    box-sizing: border-box;
-  }
+    /* 保存時のみ反映させたいCSS */
+    #profileDisplayArea.saving-style {
+      padding: 40px 30px;
+      background: #f0f8ff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    #favDisplay {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      width: 100%;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -364,31 +348,36 @@ textarea {
   <div class="container">
     <div class="title-cloud">♡オリキャラプロフィールメーカー♡</div>
     <div id="profileDisplayArea">
-      <!-- ここにプロフィールが出力されてる -->
-        <div class="profile-block">
-          <label class="custom-file-upload">
+      <div class="profile-block" data-id="1">
+        <label>【1人目】</label>
+        <div class="profile">
+           <label class="custom-file-upload">
             画像アップロード
             <input type="file" accept="image/*" onchange="previewImage(this)">
           </label>
           <img class="preview" src="" style="width: 100%; max-width: 200px; display: none; margin-top: 10px;">
-          <img class="preview" src="" style="width: 100%; max-width: 200px; display: none; margin-top: 10px;">
-          <label>名前：</label><input type="text">
-          <label>あだ名：</label><input type="text">
-          <label>年齢：</label><input type="text">
-          <label>出身地：</label><input type="text">
-           <label>血液型：</label><input type="text">
-           <label>誕生日：</label><input type="text">
-          <label>趣味：</label><input type="text">
-             <label>身長：</label><input type="text">
-          <label>好きな食べ物：</label><input type="text">
-           <label>家族構成：</label>
-<div class="sukiTextDisplay" contenteditable="true"></div>
-         <label>その他特徴：</label>
-<div class="sukiTextDisplay" contenteditable="true"></div>
-          <label>SNSリンク（任意）：</label><input type="url">
         </div>
+        
+        <label>名前：</label><input type="text">
+        <label>あだ名：</label><input type="text">
+        <label>年齢：</label><input type="text">
+        <label>出身地：</label><input type="text">
+        <label>血液型：</label><input type="text">
+        <label>誕生日：</label><input type="text">
+        <label>趣味：</label><input type="text">
+        <label>身長：</label><input type="text">
+        <label>好きな食べ物：</label><input type="text">
+        
+        <label>家族構成：</label>
+        <div class="sukiTextDisplay" contenteditable="true"></div>
+        
+        <label>その他特徴：</label>
+        <div class="sukiTextDisplay" contenteditable="true"></div>
+        
+        <label>SNSリンク（任意）：</label><input type="url">
       </div>
     </div>
+
     <div style="margin-top: 15px; text-align: center;">
       <button onclick="showShareOptions()">完成してシェア</button>
       <button onclick="addProfile()">プロフィール追加</button>
@@ -403,8 +392,7 @@ textarea {
       <button onclick="saveAsImage()">画像保存</button>
       <div id="imagePreviewContainer"></div>
     </div>
-    <img src="dog.png" class="animal dog">
-    <img src="cat.png" class="animal cat">
+
     <footer class="ad-footer">
       <p class="ad-title">♡ 一次創作におすすめグッズ ♡</p>
       <div class="ad-banner">
@@ -431,62 +419,137 @@ textarea {
         <p style="margin-top:2em;"><a href="https://mofu-mitsu.github.io/">TOPへ戻る</a></p>
       </div>
     </footer>
-    </div>
-  </footer>
-  <!-- 使い方 -->
-  <div id="howto-section" style="display:none;margin-top:40px;">
-    <div class="title-cloud">使い方</div>
-    <p>1. 画像をアップロードして、名前や年齢などを入力します。</p>
-    <p>2. 「完成してシェア」ボタンでシェアや保存ができます。</p>
-    <p>3. 「プロフィール追加」で最大3人まで追加OK！（2人目以降は削除ボタンで消せます）</p>
-    <p>4. 「使い方を見る」でこの説明が表示されます。</p>
-    <p><strong>【画像の保存について】</strong><br>スマホ：長押し→「写真に追加」<br>PC：右クリック→「名前を付けて画像を保存」</p>
   </div>
 
-  <!-- 固定TOP戻る -->
+  <img src="dog.png" class="animal dog">
+  <img src="cat.png" class="animal cat">
+
+  <div id="howto-section" style="display:none; margin-top: 40px;">
+    <div class="title-cloud">使い方</div>
+    <p>1. 画像をアップロードして、名前や年齢などを入力します。</p>
+    <p>2. 「完成してシェア」ボタンを押すと、シェア先を選ぶことができます。</p>
+    <p>3. 「プロフィール追加」ボタンで最大3人まで追加できます。（追加したものは削除ボタンで消せます）</p>
+    <p>4. 「使い方を見る」ボタンでこの説明が表示されます。</p>
+    <p><strong>【画像の保存について】</strong><br>
+      スマホの方は、画像が表示されたら<strong>長押しして「写真に追加」</strong>などを選んでください。<br>
+      PCの方は、自動でダウンロードが始まりますが、始まらない場合は表示された画像を<strong>右クリック→「名前を付けて画像を保存」</strong>してください。</p>
+  </div>
+
   <div class="footer-nav">
     <a href="https://mofu-mitsu.github.io/">← TOPへ戻る</a>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   
   <script>
-function previewImage(input) {
-  const file = input.files[0];
-  if (!file) return;
+    const orikyaraMakerUrl = 'https://mofu-mitsu.github.io/orikyara-profile-maker/';
 
-  const reader = new FileReader();
-  reader.onload = function (e) {
-    const container = input.closest('.profile-block');
-    const preview = container.querySelector('.preview');
-    if (preview) {
-      preview.src = e.target.result; // 修正: e.target.result を正しく参照
-      preview.style.display = 'block';
+    // 画像プレビュー
+    function previewImage(input) {
+      const file = input.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const container = input.closest('.profile-block');
+        const preview = container.querySelector('.preview');
+        if (preview) {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        }
+      };
+      reader.readAsDataURL(file);
     }
-  };
-  reader.readAsDataURL(file);
-}
-</script>
-    <script>
-    setTimeout(() => {
-      link.click();
-      URL.revokeObjectURL(link.href);
-    }, 100);</script>
-  <script>
+
+    // シェアオプション表示
     function showShareOptions() {
       document.getElementById("shareOptions").style.display = "block";
     }
 
+    // SNSシェア
     function shareTo(platform) {
-      const text = "♡オリキャラプロフィールメーカー♡で作ったよ！";
-      const url = location.href;
-
-      if (platform === 'line') {
-        window.open(`https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}`, '_blank');
-      } else if (platform === 'x') {
-        window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+      const element = document.getElementById('profileDisplayArea');
+      if (!element) {
+        alert('プロフィール表示エリアが見つかりません。');
+        return;
       }
+      
+      // ローディング表示
+      const previewContainer = document.getElementById('imagePreviewContainer');
+      previewContainer.innerHTML = ''; 
+      const loaderWrapper = document.createElement('div');
+      loaderWrapper.id = 'loadingWrapper';
+      loaderWrapper.style = 'display: flex; flex-direction: column; align-items: center; margin-top: 20px;';
+
+      const loader = document.createElement('div');
+      loader.className = 'loader';
+
+      const loaderText = document.createElement('p');
+      loaderText.textContent = 'ローディング中…';
+      loaderText.style = 'margin-top: 10px; font-size: 0.95em; color: #666;';
+
+      loaderWrapper.appendChild(loader);
+      loaderWrapper.appendChild(loaderText);
+      previewContainer.appendChild(loaderWrapper);
+
+      element.classList.add('saving-style');
+
+      setTimeout(() => {
+        html2canvas(element, { useCORS: true, allowTaint: true }).then(canvas => {
+          const dataURL = canvas.toDataURL('image/png');
+          const imageBlob = dataURItoBlob(dataURL);
+          const formData = new FormData();
+          formData.append('image', imageBlob);
+
+          fetch('https://api.imgur.com/3/image', {
+            method: 'POST',
+            headers: { Authorization: 'Client-ID bb8064419b2b7be' },
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (!data.success || !data.data || !data.data.link) {
+              throw new Error('Imgurのレスポンスがおかしいよ！');
+            }
+            const imageUrl = data.data.link;
+            const text = encodeURIComponent('私のオリキャラプロフィールを見てね！');
+            const fullUrl = encodeURIComponent(orikyaraMakerUrl);
+            let shareUrl = '';
+
+            if (platform === 'line') {
+              shareUrl = `https://line.me/R/msg/text/?${text}%0A${fullUrl}%0A${imageUrl}`;
+            } else if (platform === 'x') {
+              shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${imageUrl}%0A${fullUrl}`;
+            }
+
+            previewContainer.innerHTML = ''; 
+            const shareBtn = document.createElement('button');
+            shareBtn.textContent = platform === 'line' ? 'LINEでシェアする' : 'Xでシェアする';
+            shareBtn.style = 'margin-top: 15px; padding: 10px 20px; font-size: 1em; background-color: #7ca9f7; color: white; border: none; border-radius: 20px;';
+            shareBtn.onclick = () => {
+              window.open(shareUrl, '_blank');
+            };
+            previewContainer.appendChild(shareBtn);
+          })
+          .catch(error => {
+            alert('画像のアップロードに失敗しました：' + error);
+            previewContainer.innerHTML = '';
+          })
+          .finally(() => {
+            element.classList.remove('saving-style');
+            const loaderWrapper = document.getElementById('loadingWrapper');
+            if (loaderWrapper) loaderWrapper.remove();
+          });
+        }).catch(err => {
+          alert('画像の生成に失敗しました：' + err);
+          previewContainer.innerHTML = '';
+          const loaderWrapper = document.getElementById('loadingWrapper');
+          if (loaderWrapper) loaderWrapper.remove();
+        });
+      }, 100);
     }
 
+    // ネイティブシェア
     function nativeShare() {
       if (navigator.share) {
         navigator.share({
@@ -499,277 +562,189 @@ function previewImage(input) {
       }
     }
 
+    // プロフィール追加・削除ロジック
     let profileCount = 1;
 
     function addProfile() {
-      if (profileCount >= 3) return alert("最大3人まで！");
-      const area = document.getElementById("profileDisplayArea");
-      const block = document.createElement("div");
-      block.className = "profile-block";
-      block.dataset.id = profileCount + 1;
-      block.innerHTML = `
-        <hr>
-        <div style="text-align:right;"><button class="delete-btn" onclick="deleteProfile(this)">このプロフィール削除</button></div>
-  <label>【${profileCount + 1}人目】</label>
-  <div class="profile">
-    <label class="custom-file-upload">
-      画像アップロード
-      <input type="file" accept="image/*" onchange="previewImage(this)">
-    </label>
-    <img class="preview" src="" style="width: 100%; max-width: 200px; display: none; margin-top: 10px;">
-  </div>
-    <label>名前：</label><input type="text">
-          <label>あだ名：</label><input type="text">
-          <label>年齢：</label><input type="text">
-          <label>出身地：</label><input type="text">
-           <label>血液型：</label><input type="text">
-           <label>誕生日：</label><input type="text">
-          <label>趣味：</label><input type="text">
-             <label>身長：</label><input type="text">
-          <label>好きな食べ物：</label><input type="text">
-           <label>家族構成：</label>
-<div class="sukiTextDisplay" contenteditable="true"></div>
-         <label>その他特徴：</label>
-<div class="sukiTextDisplay" contenteditable="true"></div>
-          <label>SNSリンク（任意）：</label><input type="text">
-  `;
+      if (profileCount >= 3) {
+        alert("最大3人まで追加できます！");
+        return;
+      }
 
-  displayArea.appendChild(newFields); // ここを container → displayArea に変更！
-  profileCount++;
-}
+      const displayArea = document.getElementById("profileDisplayArea");
+      const newFields = document.createElement("div");
+      newFields.classList.add("profile-block");
+      newFields.dataset.id = profileCount + 1;
+      newFields.innerHTML = `
+        <hr>
+        <div style="text-align: right;">
+          <button class="delete-btn" onclick="deleteProfile(this)">このプロフィール削除</button>
+        </div>
+        <label>【${profileCount + 1}人目】</label>
+        <div class="profile">
+          <label class="custom-file-upload">
+            画像アップロード
+            <input type="file" accept="image/*" onchange="previewImage(this)">
+          </label>
+          <img class="preview" src="" style="width: 100%; max-width: 200px; display: none; margin-top: 10px;">
+        </div>
+        <label>名前：</label><input type="text">
+        <label>あだ名：</label><input type="text">
+        <label>年齢：</label><input type="text">
+        <label>出身地：</label><input type="text">
+        <label>血液型：</label><input type="text">
+        <label>誕生日：</label><input type="text">
+        <label>趣味：</label><input type="text">
+        <label>身長：</label><input type="text">
+        <label>好きな食べ物：</label><input type="text">
+        <label>家族構成：</label>
+        <div class="sukiTextDisplay" contenteditable="true"></div>
+        <label>その他特徴：</label>
+        <div class="sukiTextDisplay" contenteditable="true"></div>
+        <label>SNSリンク（任意）：</label><input type="url">
+      `;
+
+      displayArea.appendChild(newFields);
+      profileCount++;
+    }
+
+    function deleteProfile(btn) {
+      if (profileCount <= 1) {
+        alert("1人目は消せないよ！");
+        return;
+      }
+      const block = btn.closest('.profile-block');
+      block.remove();
+      profileCount--;
+      // 番号振り直し
+      const blocks = document.querySelectorAll('.profile-block');
+      blocks.forEach((b, index) => {
+        const label = b.querySelector('label');
+        if (label && label.textContent.includes('【')) {
+          label.textContent = index === 0 ? '【1人目】' : `【${index + 1}人目】`;
+        }
+      });
+    }
+
+    // 使い方開閉＆犬猫アニメーション制御
     function toggleHowTo() {
       const section = document.getElementById('howto-section');
-      section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+      const body = document.body;
+      if (section.style.display === 'block') {
+        section.style.display = 'none';
+        body.classList.remove('howto-open');
+      } else {
+        section.style.display = 'block';
+        body.classList.add('howto-open');
+      }
     }
-  </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
- <script>
-   const oshiMakerUrl = 'https://mofu-mitsu.github.io/orikyara-profile-maker/';
- 
-   function saveAsImage() {
-     const element = document.getElementById('profileDisplayArea');
-     if (!element) {
-       alert('プロフィール表示エリアが見つかりません。');
-       return;
-     }
- 
-     element.classList.add('saving-style');
- 
-    // ★ ローディング表示（前のやつを流用）
-  const previewContainer = document.getElementById('imagePreviewContainer');
-  previewContainer.innerHTML = '';
+    // 画像保存
+    function saveAsImage() {
+      const element = document.getElementById('profileDisplayArea');
+      if (!element) {
+        alert('プロフィール表示エリアが見つかりません。');
+        return;
+      }
+      element.classList.add('saving-style');
+      
+      // ローディング表示
+      const previewContainer = document.getElementById('imagePreviewContainer');
+      previewContainer.innerHTML = '';
+      const existingLoader = document.getElementById('loadingWrapper');
+      if (existingLoader) existingLoader.remove();
+      
+      const loaderWrapper = document.createElement('div');
+      loaderWrapper.id = 'loadingWrapper';
+      loaderWrapper.style = 'display: flex; flex-direction: column; align-items: center; margin-top: 20px;';
+      
+      const loader = document.createElement('div');
+      loader.className = 'loader';
+      
+      const loaderText = document.createElement('p');
+      loaderText.textContent = '頑張って画像を準備中…';
+      loaderText.style = 'margin-top: 10px; font-size: 0.95em; color: #666;';
+      
+      loaderWrapper.appendChild(loader);
+      loaderWrapper.appendChild(loaderText);
+      previewContainer.appendChild(loaderWrapper);
 
-  const existingLoader = document.getElementById('loadingWrapper');
-  if (existingLoader) existingLoader.remove();
+      setTimeout(() => {
+        html2canvas(element, { useCORS: true, allowTaint: true }).then(canvas => {
+          const dataURL = canvas.toDataURL('image/png');
 
-  const loaderWrapper = document.createElement('div');
-  loaderWrapper.id = 'loadingWrapper';
-  loaderWrapper.style = 'display: flex; flex-direction: column; align-items: center; margin-top: 20px;';
+          // PC用ダウンロード
+          const link = document.createElement('a');
+          link.href = dataURL;
+          link.download = 'profile.png';
+          link.click();
 
-  const loader = document.createElement('div');
-  loader.className = 'loader';
+          // スマホ用画像表示
+          previewContainer.innerHTML = '';
+          const img = document.createElement('img');
+          img.src = dataURL;
+          img.alt = '保存用プロフィール画像';
+          img.style = 'max-width: 100%; margin-top: 20px; border: 1px solid #ccc;';
+          previewContainer.appendChild(img);
 
-  const loaderText = document.createElement('p');
-  loaderText.textContent = '頑張って画像を準備中…';
-  loaderText.style = 'margin-top: 10px; font-size: 0.95em; color: #666;';
+          const note = document.createElement('p');
+          note.textContent = '※スマホの方はこの画像を長押しして保存してね';
+          note.style = 'font-size: 0.9em; color: #666;';
+          previewContainer.appendChild(note);
 
-  loaderWrapper.appendChild(loader);
-  loaderWrapper.appendChild(loaderText);
-  previewContainer.appendChild(loaderWrapper);
+          // imgurアップロード（リンク用）
+          uploadToImgur(dataURL);
+        }).catch(err => {
+          alert('画像の生成に失敗しました：' + err);
+        }).finally(() => {
+          element.classList.remove('saving-style');
+        });
+      }, 100);
+    }
 
-  // ★ ローディング表示ここまで
-
-     setTimeout(() => {
-       html2canvas(element, { useCORS: true, allowTaint: true }).then(canvas => {
-         const dataURL = canvas.toDataURL('image/png');
- 
-         // PC用ダウンロード
-         const link = document.createElement('a');
-         link.href = dataURL;
-         link.download = 'profile.png';
-         link.click();
- 
-         // スマホ用に画像表示
-         const previewContainer = document.getElementById('imagePreviewContainer');
-         previewContainer.innerHTML = '';
-         const img = document.createElement('img');
-         img.src = dataURL;
-         img.alt = '保存用プロフィール画像';
-         img.style = 'max-width: 100%; margin-top: 20px; border: 1px solid #ccc;';
-         previewContainer.appendChild(img);
- 
-         const note = document.createElement('p');
-         note.textContent = '※スマホの方はこの画像を長押しして保存してね';
-         note.style = 'font-size: 0.9em; color: #666;';
-         previewContainer.appendChild(note);
- 
-         // imgurアップロード
-         uploadToImgur(dataURL);
-       }).catch(err => {
-         alert('画像の生成に失敗しました：' + err);
-       }).finally(() => {
-         element.classList.remove('saving-style');
-       });
-     }, 100);
-   }
- 
-   function uploadToImgur(dataURL) {
-     const base64Image = dataURL.split(',')[1];
-     const clientId = 'bb8064419b2b7be';
- 
-     fetch('https://api.imgur.com/3/image', {
-       method: 'POST',
-       headers: {
-         Authorization: 'Client-ID ' + clientId,
-         'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({
-         image: base64Image,
-         type: 'base64'
-       })
-     })
-     .then(response => response.json())
-     .then(data => {
-       if (data.success) {
-         const imgurPageUrl = 'https://imgur.com/' + data.data.id;
-         const previewContainer = document.getElementById('imagePreviewContainer');
-         const linkNote = document.createElement('p');
-         linkNote.innerHTML = `シェア用リンク：<a href="${imgurPageUrl}" target="_blank">${imgurPageUrl}</a>`;
-         linkNote.style = 'margin-top: 10px; font-size: 0.9em; color: #333;';
-         previewContainer.appendChild(linkNote);
-       } else {
-         alert('画像のアップロードに失敗しました。');
-       }
-     })
-     .catch(err => {
-       alert('imgurアップロードエラー：' + err);
-     });
-   }
- 
-   function shareTo(platform) {
-     const element = document.getElementById('profileDisplayArea');
-     if (!element) {
-       alert('プロフィール表示エリアが見つかりません。');
-       return;
-     }
-     // ローディング表示を追加
-  const previewContainer = document.getElementById('imagePreviewContainer');
-  previewContainer.innerHTML = ''; // 既存の内容をクリア
-  const loaderWrapper = document.createElement('div');
-  loaderWrapper.id = 'loadingWrapper';
-  loaderWrapper.style = 'display: flex; flex-direction: column; align-items: center; margin-top: 20px;';
-
-  const loader = document.createElement('div');
-  loader.className = 'loader';
-
-  const loaderText = document.createElement('p');
-  loaderText.textContent = 'ローディング中…';
-  loaderText.style = 'margin-top: 10px; font-size: 0.95em; color: #666;';
-
-  loaderWrapper.appendChild(loader);
-  loaderWrapper.appendChild(loaderText);
-  previewContainer.appendChild(loaderWrapper);
-
- 
-     element.classList.add('saving-style');
-
-  setTimeout(() => {
-    html2canvas(element, { useCORS: true, allowTaint: true }).then(canvas => {
-      const dataURL = canvas.toDataURL('image/png');
-      const imageBlob = dataURItoBlob(dataURL);
-      const formData = new FormData();
-      formData.append('image', imageBlob);
+    // Imgurアップロード
+    function uploadToImgur(dataURL) {
+      const base64Image = dataURL.split(',')[1];
+      const clientId = 'bb8064419b2b7be';
 
       fetch('https://api.imgur.com/3/image', {
         method: 'POST',
         headers: {
-          Authorization: 'Client-ID bb8064419b2b7be'
+          Authorization: 'Client-ID ' + clientId,
+          'Content-Type': 'application/json'
         },
-        body: formData
+        body: JSON.stringify({
+          image: base64Image,
+          type: 'base64'
+        })
       })
       .then(response => response.json())
       .then(data => {
-  if (!data.success || !data.data || !data.data.link) {
-    throw new Error('Imgurのレスポンスがおかしいよ！');
-  }
-  const imageUrl = data.data.link;
-        const text = encodeURIComponent('私のオリキャラプロフィールを見てね！');
-        const fullUrl = encodeURIComponent(oshiMakerUrl);
-        let shareUrl = '';
-
-        if (platform === 'line') {
-          shareUrl = `https://line.me/R/msg/text/?${text}%0A${fullUrl}%0A${imageUrl}`;
-        } else if (platform === 'x') {
-          shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${imageUrl}%0A${fullUrl}`;
+        if (data.success) {
+          const imgurPageUrl = 'https://imgur.com/' + data.data.id;
+          const previewContainer = document.getElementById('imagePreviewContainer');
+          const linkNote = document.createElement('p');
+          linkNote.innerHTML = `シェア用リンク：<a href="${imgurPageUrl}" target="_blank">${imgurPageUrl}</a>`;
+          linkNote.style = 'margin-top: 10px; font-size: 0.9em; color: #333;';
+          previewContainer.appendChild(linkNote);
         }
-
-          // シェアボタンを表示して、ユーザー操作で開かせる
-          previewContainer.innerHTML = ''; // ローディングを消す
-        const shareBtn = document.createElement('button');
-        shareBtn.textContent = platform === 'line' ? 'LINEでシェアする' : 'Xでシェアする';
-        shareBtn.style = 'margin-top: 15px; padding: 10px 20px; font-size: 1em;';
-        shareBtn.onclick = () => {
-          window.open(shareUrl, '_blank');
-        };
-
-        previewContainer.appendChild(shareBtn);
       })
-      .catch(error => {
-        alert('画像のアップロードに失敗しました：' + error);
-        previewContainer.innerHTML = ''; // ローディングを消す
-      })
-      .finally(() => {
-        element.classList.remove('saving-style');
-        const loaderWrapper = document.getElementById('loadingWrapper');
-        if (loaderWrapper) loaderWrapper.remove(); // ローディングを削除
+      .catch(err => {
+        console.log('imgurアップロードエラー：' + err);
       });
-    }).catch(err => {
-      alert('画像の生成に失敗しました：' + err);
-      previewContainer.innerHTML = ''; // ローディングを消す
-      const loaderWrapper = document.getElementById('loadingWrapper');
-      if (loaderWrapper) loaderWrapper.remove(); // ローディングを削除
-    });
-  }, 100);
+    }
 
-}
- 
-   function dataURItoBlob(dataURI) {
-     const byteString = atob(dataURI.split(',')[1]);
-     const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
-     const ab = new ArrayBuffer(byteString.length);
-     const ia = new Uint8Array(ab);
-     for (let i = 0; i < byteString.length; i++) {
-       ia[i] = byteString.charCodeAt(i);
-     }
-     return new Blob([ab], { type: mimeString });
-   }
-     // 「ここが好き」の改行反映スクリプト
-  document.addEventListener("DOMContentLoaded", function () {
-    const textareas = document.querySelectorAll("textarea");
-
-    textareas.forEach((textarea) => {
-      textarea.addEventListener("input", () => {
-        const container = textarea.closest(".profile-block");
-        const display = container.querySelector(".sukiTextDisplay");
-
-        if (display) {
-          const rawText = textarea.value;
-          const formattedText = rawText.replace(/\n/g, "<br>");
-          display.innerHTML = formattedText;
-        }
-      });
-    });
-  });
-  function prepareForScreenshot() {
-  const container = document.getElementById("profileDisplayArea");
-  container.classList.add("screenshot-mode");
-}
-
-function restoreAfterScreenshot() {
-  const container = document.getElementById("profileDisplayArea");
-  container.classList.remove("screenshot-mode");
-}
- </script>
-
+    // DataURIからBlobへの変換
+    function dataURItoBlob(dataURI) {
+      const byteString = atob(dataURI.split(',')[1]);
+      const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+      const ab = new ArrayBuffer(byteString.length);
+      const ia = new Uint8Array(ab);
+      for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], { type: mimeString });
+    }
+  </script>
 </body>
+</html>
