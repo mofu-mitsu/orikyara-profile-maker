@@ -192,22 +192,20 @@ textarea:focus {
       cursor: pointer;
     }
 
-   .animal {
-  position: fixed; /* ← absoluteからfixedに変更！ */
-  width: 70px;
-  z-index: 1000; /* 十分に上のレイヤーにしておく */
-  pointer-events: none; /* ←クリックなどの邪魔を防ぐ */
-}
+    /* 犬猫逃げる */
+    .animal {
+      position: fixed;
+      width: 70px;
+      z-index: 1000;
+      pointer-events: none;
+      transition: bottom 0.4s ease;
+    }
+    .dog { bottom: 20px; left: 20px; }
+    .cat { bottom: 20px; right: 20px; }
+    .howto-open .animal { bottom: 130px !important; }
 
-.dog {
-  bottom: 20px;
-  left: 20px;
-}
-
-.cat {
-  bottom: 20px;
-  right: 20px;
-}
+    /* 使い方余白 */
+    #howto-section { padding-bottom: 280px; }
     .share-options {
       display: none;
       margin-top: 10px;
