@@ -277,63 +277,82 @@ textarea {
       height: auto;
     }
   }
- .ad-footer {
-  text-align: center;
-  padding: 20px;
-  background: #f0f8ff;
-  border-top: 2px dashed #a5c8f8;
-  margin-top: 40px;
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-}
 
-.ad-title {
-  font-weight: bold;
-  color: #7ca9f7;
-  font-size: 1.2em;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-
-.ad-banner {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.ad-banner a img {
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
-}
-.ad-banner a img:hover {
-  transform: scale(1.05);
-}
-.back-to-home a {
-  color: #7ca9f7;
-  font-size: 0.95em;
-}
-.back-to-home a:hover {
-  text-decoration: underline;
-}
-
-/* 保存時のみ反映させたいCSS */
-#profileDisplayArea.saving-style {
-  padding: 40px 30px;
-  background: #f0f8ff;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
-#favDisplay {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  width: 100%;
-  box-sizing: border-box;
-}
+    /* 固定フッター */
+    .footer-nav {
+      position: fixed;
+      bottom: 0; left: 0;
+      width: 100%;
+      background: #f0f8ff;
+      padding: 15px;
+      text-align: center;
+      z-index: 999;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+      border-top: 2px dashed #a5c8f8;
+    }
+    .footer-nav a {
+      color: #7ca9f7;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+   .ad-footer {
+    text-align: center;
+    padding: 20px;
+    background: #f0f8ff;
+    border-top: 2px dashed #a5c8f8;
+    margin-top: 40px;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+  }
+  
+  .ad-title {
+    font-weight: bold;
+    color: #7ca9f7;
+    font-size: 1.2em;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .ad-banner {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .ad-banner a img {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+  }
+  .ad-banner a img:hover {
+    transform: scale(1.05);
+  }
+  .back-to-home a {
+    color: #7ca9f7;
+    font-size: 0.95em;
+  }
+  .back-to-home a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 保存時のみ反映させたいCSS */
+  #profileDisplayArea.saving-style {
+    padding: 40px 30px;
+    background: #f0f8ff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #favDisplay {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
+  }
   </style>
 </head>
 <body>
@@ -366,7 +385,6 @@ textarea {
         </div>
       </div>
     </div>
-
     <div style="margin-top: 15px; text-align: center;">
       <button onclick="showShareOptions()">完成してシェア</button>
       <button onclick="addProfile()">プロフィール追加</button>
@@ -383,57 +401,47 @@ textarea {
     </div>
     <img src="dog.png" class="animal dog">
     <img src="cat.png" class="animal cat">
- <footer class="ad-footer" style="background: #f9f9f9; padding: 20px; text-align: center;">
-  <p class="ad-title" style="font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">♡ 一次創作におすすめグッズ ♡</p>
-  <div class="ad-banner" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
-    
-    <!-- シェイカーケース -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa81e3.e0fcb7e0.47fa81e4.b5024cc9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flifebenri%2Flt-0158%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa81e3.e0fcb7e0.47fa81e4.b5024cc9/?me_id=1407685&item_id=10000257&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flifebenri%2Fcabinet%2F11043897%2F11050262%2F01.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="シェイカーケース" style="border: none;">
-    </a>
-
-    <!-- アクスタ -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa80de.4856dd11.47fa80df.d10c5453/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fballoon-macaron%2Facryl-002%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa80de.4856dd11.47fa80df.d10c5453/?me_id=1379709&item_id=10006033&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fballoon-macaron%2Fcabinet%2F09567337%2Fimgrc0092366252.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="アクスタ" style="border: none;">
-    </a>
-
-    <!-- イラストマーカー -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa8bcb.9612016c.47fa8bcc.ab6f0ca2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagisa-ya%2Fillustmarker_80set%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa8bcb.9612016c.47fa8bcc.ab6f0ca2/?me_id=1400214&item_id=10000021&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_gold%2Fnagisa-ya%2F05.IllustMarker%2F01.80%2Fmain02.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="イラストマーカー" style="border: none;">
-    </a>
-
-    <!-- オーダーメイドクッション -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa8d68.c53621dd.47fa8d69.2ebe462a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbesutosera%2Fthrowpillow-order%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa8d68.c53621dd.47fa8d69.2ebe462a/?me_id=1410997&item_id=10000122&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbesutosera%2Fcabinet%2F09924687%2F10319801%2Fimgrc0121092713.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="オーダーメイドクッション" style="border: none;">
-    </a>
-     <!-- 🎁 新しく追加されたマグカップ -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47faa793.6c4c2278.47faa794.2883453c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fprintbank%2F927187%2F&link_type=pict&ut=..." target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47faa793.6c4c2278.47faa794.2883453c/?me_id=1205662&item_id=10000037&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fprintbank%2Fcabinet%2Fitem%2Fnitiyouzakka%2Fmagcup%2Fimg62837959.jpg%3F_ex%3D80x80&s=80x80&t=pict" border="0" style="margin:2px" alt="" title="">
-    </a>
-
-    <!-- 液タブ -->
-    <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa880c.4cee4403.47fa880d.d75a9353/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fxp-pen%2Fartist12-2nd-jp%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
-      <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa880c.4cee4403.47fa880d.d75a9353/?me_id=1354080&item_id=10000336&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fxp-pen%2Fcabinet%2F08892057%2Fimgrc0088820665.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="液タブ" style="border: none;">
-    </a>
-
-  </div>
-   <div class="back-to-home">
-    <p style="margin-top: 2em;">
-      <a href="https://mofu-mitsu.github.io/" style="text-decoration:none; font-weight:bold;">TOPへ戻る</a>
-    </p>
-  </div>
-</footer>
+    <footer class="ad-footer">
+      <p class="ad-title">♡ 一次創作におすすめグッズ ♡</p>
+      <div class="ad-banner">
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa81e3.e0fcb7e0.47fa81e4.b5024cc9/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flifebenri%2Flt-0158%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa81e3.e0fcb7e0.47fa81e4.b5024cc9/?me_id=1407685&item_id=10000257&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flifebenri%2Fcabinet%2F11043897%2F11050262%2F01.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="シェイカーケース">
+        </a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa80de.4856dd11.47fa80df.d10c5453/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fballoon-macaron%2Facryl-002%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa80de.4856dd11.47fa80df.d10c5453/?me_id=1379709&item_id=10006033&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fballoon-macaron%2Fcabinet%2F09567337%2Fimgrc0092366252.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="アクスタ">
+        </a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa8bcb.9612016c.47fa8bcc.ab6f0ca2/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fnagisa-ya%2Fillustmarker_80set%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa8bcb.9612016c.47fa8bcc.ab6f0ca2/?me_id=1400214&item_id=10000021&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_gold%2Fnagisa-ya%2F05.IllustMarker%2F01.80%2Fmain02.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="イラストマーカー">
+        </a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa8d68.c53621dd.47fa8d69.2ebe462a/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fbesutosera%2Fthrowpillow-order%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa8d68.c53621dd.47fa8d69.2ebe462a/?me_id=1410997&item_id=10000122&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fbesutosera%2Fcabinet%2F09924687%2F10319801%2Fimgrc0121092713.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="オーダーメイドクッション">
+        </a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47faa793.6c4c2278.47faa794.2883453c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fprintbank%2F927187%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47faa793.6c4c2278.47faa794.2883453c/?me_id=1205662&item_id=10000037&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fprintbank%2Fcabinet%2Fitem%2Fnitiyouzakka%2Fmagcup%2Fimg62837959.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="マグカップ">
+        </a>
+        <a href="https://hb.afl.rakuten.co.jp/ichiba/47fa880c.4cee4403.47fa880d.d75a9353/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fxp-pen%2Fartist12-2nd-jp%2F&link_type=pict" target="_blank" rel="nofollow sponsored noopener">
+          <img src="https://hbb.afl.rakuten.co.jp/hgb/47fa880c.4cee4403.47fa880d.d75a9353/?me_id=1354080&item_id=10000336&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fxp-pen%2Fcabinet%2F08892057%2Fimgrc0088820665.jpg%3F_ex%3D80x80&s=80x80&t=pict" alt="液タブ">
+        </a>
+      </div>
+      <div class="back-to-home">
+        <p style="margin-top:2em;"><a href="https://mofu-mitsu.github.io/">TOPへ戻る</a></p>
+      </div>
+    </footer>
     </div>
   </footer>
-  <div id="howto-section" style="display:none;">
+  <!-- 使い方 -->
+  <div id="howto-section" style="display:none;margin-top:40px;">
     <div class="title-cloud">使い方</div>
-    <p>1. 画像をアップロードして、名前やあだ名、一言などを入力します。</p>
-    <p>2. 「完成してシェア」ボタンを押すと、シェア先を選ぶことができます。</p>
-    <p>3. 「プロフィール追加」ボタンで最大3人までプロフィールを追加できます。</p>
-    <p>4. 「使い方を見る」ボタンでこの説明が表示されます。</p>
-    <p><strong>【画像の保存について】</strong><br>
-      スマホの方は、画像が表示されたら<strong>長押しして「写真に追加」</strong>などを選んでください。<br>
-      PCの方は、自動でダウンロードが始まりますが、始まらない場合は表示された画像を<strong>右クリック→「名前を付けて画像を保存」</strongしてください。</p>
+    <p>1. 画像をアップロードして、名前や年齢などを入力します。</p>
+    <p>2. 「完成してシェア」ボタンでシェアや保存ができます。</p>
+    <p>3. 「プロフィール追加」で最大3人まで追加OK！（2人目以降は削除ボタンで消せます）</p>
+    <p>4. 「使い方を見る」でこの説明が表示されます。</p>
+    <p><strong>【画像の保存について】</strong><br>スマホ：長押し→「写真に追加」<br>PC：右クリック→「名前を付けて画像を保存」</p>
+  </div>
+
+  <!-- 固定TOP戻る -->
+  <div class="footer-nav">
+    <a href="https://mofu-mitsu.github.io/">← TOPへ戻る</a>
   </div>
 
   
@@ -489,17 +497,15 @@ function previewImage(input) {
 
     let profileCount = 1;
 
-function addProfile() {
-  if (profileCount >= 3) {
-    alert("最大3人まで追加できます！");
-    return;
-  }
-
-  const displayArea = document.getElementById("profileDisplayArea"); // ここ変更！
-  const newFields = document.createElement("div");
-  newFields.classList.add("profile-block"); // スタイル調整しやすい用にclass追加
-  newFields.innerHTML = `
-    <hr>
+    function addProfile() {
+      if (profileCount >= 3) return alert("最大3人まで！");
+      const area = document.getElementById("profileDisplayArea");
+      const block = document.createElement("div");
+      block.className = "profile-block";
+      block.dataset.id = profileCount + 1;
+      block.innerHTML = `
+        <hr>
+        <div style="text-align:right;"><button class="delete-btn" onclick="deleteProfile(this)">このプロフィール削除</button></div>
   <label>【${profileCount + 1}人目】</label>
   <div class="profile">
     <label class="custom-file-upload">
